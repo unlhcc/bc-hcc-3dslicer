@@ -1,0 +1,10 @@
+---
+name: 3D Slicer
+category: Interactive Apps
+subcategory: GUIs
+role: batch_connect
+description: |
+  This app will launch the [3D Slicer] GUI.  You will be able
+  to interact with the 3D Slicer GUI through a VNC session.
+
+  [3D Slicer]: https://www.slicer.org/
