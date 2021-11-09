@@ -1,7 +1,9 @@
 #!/bin/bash
 
-#set -x
 # init lmod within container
+# # # the lmod profile file are named differently on EL7 vs EL8
+# # # don't ask me why
+# [[ -f /etc/profile.d/z00_lmod.sh ]] && source /etc/profile.d/z00_lmod.sh
 [[ -f /etc/profile.d/modules.sh ]] && source /etc/profile.d/modules.sh
 
 # Clean the environment
@@ -23,9 +25,9 @@ cd "${HOME}"
   export DBUS_SYSTEM_BUS_ADDRESS=unix:path=/var/run/dbus/system_bus_socket
   export `dbus-launch`
   set -x
-  xfwm4 --compositor=off --daemon --sm-client-disable &
+  xfwm4 --compositor=off --sm-client-disable &
   xsetroot -solid "#C7C8CA"
-  xfsettingsd --sm-client-disable
+  xfsettingsd --sm-client-disable &
   xfce4-panel --sm-client-disable &
   xfdesktop --sm-client-disable &
 ) &
