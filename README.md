@@ -15,11 +15,11 @@ This Batch Connect app requires the following software be available on the
 OnDemand node):
 
 - [3D Slicer]
-- [Singularity]
+- [Apptainer]
 - [Lmod]
 
 [3D Slicer]: https://www.slicer.org/
-[Singularity]: https://sylabs.io/singularity/
+[Apptainer]: https://apptainer.org
 [Xfce Desktop]: https://xfce.org/
 [Lmod]: https://www.tacc.utexas.edu/research-development/tacc-projects/lmod
 
